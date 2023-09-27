@@ -1,2 +1,3 @@
-# lecture-demos
-Demos for Info340b-wi23
+# INFO 340 Lecture Demos
+
+This repository contains lecture demo code for the _Client-Side Web Development_ course at the UW iSchool.
