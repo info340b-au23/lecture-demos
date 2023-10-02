@@ -1,4 +1,4 @@
-h1 {
+/* h1 {
   font-family: 'Helvetica';
   color: white;
   background-color: rebeccapurple;
@@ -21,9 +21,36 @@ p {
 img {
   max-height: 150px;
   border-radius: 20px;
-}
+} */
 
 /* paragraph */
+/* .centered {
+  text-align: center;
+}
+
+.about-section {
+  font-family: 'Papyrus';
+  background-color: #eee;
+} */
+
+h1 {
+  font-family: 'Helvetica';
+  color: white;
+  background-color: #333;
+  /* background-color: rebeccapurple; */
+  /* padding: .5em; */
+}
+
+p {
+  font-family: 'Arial';
+  font-size: 18px;
+}
+
+img {
+  max-height: 150px;
+  border-radius: 20px;
+}
+
 .centered {
   text-align: center;
 }
@@ -31,5 +58,4 @@ img {
 .about-section {
   font-family: 'Papyrus';
   background-color: #eee;
-}
-
+} 
