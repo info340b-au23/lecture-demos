@@ -48,14 +48,21 @@ p {
 
 img {
   max-height: 150px;
-  border-radius: 20px;
+  border-radius: 100px;
 }
 
 .centered {
   text-align: center;
 }
 
-.about-section {
+.cow {
+  background-color: aqua;
+}
+
+.sheep {
+  background-color: chocolate;
+}
+
+/* .about-section {
   font-family: 'Papyrus';
-  background-color: #eee;
-} 
+  background-color: #eee; */
