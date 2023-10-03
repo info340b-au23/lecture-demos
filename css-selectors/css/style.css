@@ -16,3 +16,5 @@ p {
 .about {
     background-color: #eee;
 }
+
+/* li:nth-child(2n+1) { background-color: yellow; }  */
