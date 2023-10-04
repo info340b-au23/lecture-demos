@@ -8,8 +8,13 @@ h2 {
     color: rebeccapurple;
 }
 
+li {
+    background-color: rebeccapurple;
+}
+
 p {
     color: #333;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* elements with class="about" */
@@ -17,8 +22,25 @@ p {
     background-color: #eee;
 }
 
-/* li:nth-child(2n+1) { background-color: yellow; }  */
+li:nth-child(2n) { background-color: yellow; } 
 
-/* a:hover, a:focus{
+a:hover, a:focus{
+    background-color: aqua;
+    font-size: 15px;
+}
+
+/* #navbar {
     background-color: aqua;
 } */
+
+h2, .alert, #navbar {
+    background-color: azure;
+ }
+
+ p.alert { background-color: orange;} /* applied to <p> AND .alert */
+
+.alert.success {background-color: green;} /* applied to .alert AND .success */
+
+header > p {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+ }
