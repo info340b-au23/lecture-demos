@@ -1,0 +1,91 @@
+/* general styling */
+h1,
+h2,
+h3 {
+    font-family: 'Helvetica';
+}
+
+h2 {
+    color: rebeccapurple;
+}
+
+
+/* nav bar */
+nav {
+    color: white;
+    background-color: #4b2e83;
+}
+
+nav a {
+    color: white;
+}
+
+/* Example 3 - turn the whole thing into side by side columns! */ 
+main {
+    display: flex;
+    align-items: center;
+} 
+
+nav li {
+
+    display: inline-block;
+    border: 1px solid white;
+    margin: 10px;
+    padding: 10px;
+}
+
+/* about section */
+.about {
+    background-color: #f8f8f8;
+    flex-basis: 40%;
+    order: 0;
+    margin-left: 2em;
+
+}
+
+/* Example 1 my flexbox pool */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* flex-direction: row-reverse; */
+
+}
+/* Example 2 properties the cards in the flexbox use */
+ .courses .card {
+    flex-grow: 1;
+    flex-basis: 200px; 
+    /* flex-basis: 48% */
+
+/* make the card also a pool! */
+
+     display: flex;
+    flex-direction: column;
+    align-items: center; 
+ } 
+
+ .courses .card.microsoft {
+    /* flex-grow: 5; */
+    /* flex-grow: 0; */
+    flex-grow: 1;
+}
+
+.courses .card:last-child {
+    flex-grow: 0;
+    
+}
+
+/* course cards */
+.courses .card {
+    border: 1px solid black;
+    margin: .25em;
+}
+
+.courses img {
+    max-width: 150px;
+}
+
+footer {
+    font-size: smaller;
+}
+
