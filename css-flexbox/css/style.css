@@ -2,7 +2,7 @@
 h1,
 h2,
 h3 {
-    font-family: 'Helvetica';
+    /* font-family: 'Helvetica'; */
 
     /* Example 1 */
     /* font that doesn't exist */
@@ -11,7 +11,8 @@ h3 {
     /*font that doesn't exist, but fall back on a sans-serif font (maybe helvetic)*/
     /* font-family: 'Fakevetica', sans-serif; */
     /* After i've added the google font from the internet (and added the link in my html file) */
-    /* font-family: 'Fakevetica', 'Open Sans';  */
+    font-family: 'Fakevetica', 'Open Sans', sans-serif; 
+    
 }
 
 h2 {
@@ -40,18 +41,18 @@ nav li {
     height: 750px; */
 
     /* Example 3 */
-    /* display: inline-block; */
+    display: inline-block;
 
     /* Example 3a */
     /* Show you can set width and height if you use inline-block */
-    /* width: 200px;
-    height: 75px; */
+    width: 200px;
+    height: 75px;
 
     /* Example 3b - make it look nicer */
     /* adding border; */
-    /* border: 1px solid white;
+    border: 1px solid white;
     margin: 10px;
-    padding: 10px; */
+    padding: 10px;
 }
 
 /* about section */
@@ -60,13 +61,13 @@ nav li {
 
     /* Example 4 - show where padding, border margin are */
     /* adding padding */
-    /* padding: 1em; */
+    padding: 1em;
 
     /* adding border */
-    /* border: 3px dashed rebeccapurple; */
+    border: 3px dashed rebeccapurple;
 
     /* adding margin */
-    /* margin: 1em; */
+    margin: 1em;
 }
 
 
