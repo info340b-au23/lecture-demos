@@ -24,17 +24,6 @@ li {
     border: 1px solid black ;
 }
 
-/* On a larger screen, use a green background and on swap the buttons to white */
-/* In here will apply at >768 */
-
-/* @media (min-width: 768px) {
-    
-    body {
-        background-color:greenyellow;
-    }
-* {
-    box-sizing: border-box;
-}
 
 /* general styling */
 h1,
