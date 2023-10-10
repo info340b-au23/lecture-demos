@@ -44,8 +44,8 @@ li {
       background-color: white;
   }
 } */
-/* 
-@media (min-width:1200px) {
+
+/* @media (min-width:1200px) {
   body {
       padding: 0 3em;
       background-color: darkblue;
