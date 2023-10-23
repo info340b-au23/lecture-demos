@@ -8,7 +8,7 @@ const peopleArray = [
   {name: 'Emma', height: 71, weight: 152}
 ]
 
-console.log(peopleArray);
+// console.log(peopleArray);
 
 // // Slide 9
 // //assign array to variable
@@ -21,6 +21,7 @@ console.log(peopleArray);
 
 // //access value in other
 // console.log( other[1] ); //print 'b'
+// console.log( myArray[1] ); //print 'b'
 
 // //assign function to variable
 // function sayHello(name) { 
@@ -33,9 +34,10 @@ console.log(peopleArray);
 
 // //prints "Hello, everyone"
 // other1('everyone'); 
+// sayHello('everyone'); 
 
 
-// Slide 10
+// // Slide 10
 // const array = [1,2,3]; //named variable (not anonymous)
 // console.log(array); //pass in named var
 
@@ -72,21 +74,22 @@ console.log(peopleArray);
 // //assign function to object
 // obj.sayHi = sayHello;
 
-// // //access with dot notation
-// // obj.sayHi('all'); //prints "Hello all"
-// // console.log(obj.sayHi)
+// //access with dot notation
+// obj.sayHi('all'); //prints "Hello all"
+// console.log(obj.sayHi)
 
-// console.log(obj);
+// // console.log(obj);
 
 // //assign literal (anonymous value)
 // obj.otherFunc = function() { 
 //     console.log("Hello world!");
+//     return 1;
 // }
 
 // console.log(obj);
-// // console.log(obj.otherFunc());
+// console.log("obj.otherFunc(): ", obj.otherFunc());
 
-// slide 12
+// // slide 12
 
 // function sayHello(name) { 
 //   console.log("Hello, "+name);
@@ -100,12 +103,14 @@ console.log(peopleArray);
 // }
 
 // // //call function and pass value
-// // doWorld(sayHello); //prints "Hello world"
+// doWorld(sayHello); //prints "Hello world"
 
 
-// //pass literal (anonymous value)
+// // //pass literal (anonymous value)
 // doWorld(function(msg) {
-//  console.log("you said: "+msg);
+
+//    console.log("you said: "+msg);
+
 // }); //prints "you said: world"
 
 /* note where parens and braces close! */
@@ -137,19 +142,20 @@ console.log(peopleArray);
 
 // function rubBelly() {
 //   console.log('rub your belly');
+//   // return patHead;
 // }
 
 // //pass in the callbacks to do them together
-// doTogether(rubBelly, patHead());
+// doTogether(  rubBelly, patHead);
+// 
+// Slide 15
 
-// // Slide 15
-
-// // //Arbitrary list of people's names, heights, and weights
-// // let peopleArray = [ {name: 'Ada', height: 64, weight: 200},
-// //                     {name: 'Bob', height: 54, weight: 199},
-// //                     {name: 'Chris', height: 69, weight: 139},
-// //                     {name: 'Diya', height: 69, weight: 144},
-// //                     {name: 'Emma', height: 71, weight: 152}];
+// //Arbitrary list of people's names, heights, and weights
+// let peopleArray = [ {name: 'Ada', height: 64, weight: 200},
+//                     {name: 'Bob', height: 54, weight: 199},
+//                     {name: 'Chris', height: 69, weight: 139},
+//                     {name: 'Diya', height: 69, weight: 144},
+//                     {name: 'Emma', height: 71, weight: 152}];
 
 // console.log('**-Initial**');
 // peopleArray.forEach((person) => console.log(person))
@@ -219,9 +225,9 @@ console.log(peopleArray);
 
 // //Slide 18 Mapping
 
-// // function square(n) { //a function that squares a number
-// //   return n*n;
-// // }
+// function square(n) { //a function that squares a number
+//   return n*n;
+// }
 
 // const numbers = [1,2,3,4,5];  //an initial array
 // console.log(numbers);
@@ -235,12 +241,14 @@ console.log(peopleArray);
 // // console.log(squares); // [1, 4, 9, 16, 25]
 
 // //map the numbers using anonymous callback function
-// const squares = numbers.map(function(n) {
-//     return n*n;
-// })
+// // const squares = numbers.map(square)
 
+// const squares = numbers.map(function(n) {
+//   return n*n;
+// });
 
 // console.log(squares); // [1, 4, 9, 16, 25]
+// console.log(numbers)
 
 // // Slide 19 - Practice
 
@@ -260,28 +268,32 @@ console.log(peopleArray);
 
 // console.log(peopleGreetings);
 
-//Slide 20 - Filtering
+// Slide 20 - Filtering
 
-// const array = [3,1,4,2,5];
-// console.log(array);
+const array = [3,1,4,2,5];
+console.log(array);
 
-// const isACrowd = array.filter(function(n) { 
-//    return n >= 3; //keep if > 3
-// }); //returns [3,4,5]
+const isACrowd = array.filter(function(n) { 
+   return n >= 3; //keep if > 3
+}); //returns [3,4,5]
 
-// console.log(isACrowd);
+console.log(isACrowd);
 
-// console.log(peopleArray);
-// const tallPeopleArray = peopleArray.filter(function (personObj) {
-//   return personObj.height > 69;
-// })
-// console.log(tallPeopleArray);
+console.log(peopleArray);
+
+const tallPeopleArray = peopleArray.filter(function (personObj) {
+  
+  return personObj.height > 69;
+
+})
+console.log(tallPeopleArray);
 
 
 
 // // Slide 21 - Reducing
 
 // const letters = ['a','b','c','d','e'];  //an initial array
+
 // function link(accumulation, newItem) { //combines two strings
 //   const newAccumulation = accumulation + "->" + newItem;
 //   return newAccumulation;
@@ -291,10 +303,12 @@ console.log(peopleArray);
 // for(let i=0; i<letters.length; i++){
 //   linked = link(linked, letters[i]);
 // }
-// console.log(linked); //"->a->b->c->d->e"
+// console.log("linked element: ", linked); //"->a->b->c->d->e"
+// console.log(letters)
 
 // // Slide 22 - Reducing
 // const letters = ['a','b','c','d','e'];  //an initial array
+
 // function link(accumulation, newItem) { //combines two strings
 //   const newAccumulation = accumulation + "->" + newItem;
 //   return newAccumulation;
@@ -312,15 +326,15 @@ console.log(peopleArray);
 
 // console.log(totalHeightOfPeople);
 
-// // Slide 23 - Practice 
-// const phoneDigits = [6,5,2,6,3.5,7];
+// Slide 23 - Practice 
+const phoneDigits = [6,5,9,6,3.5,7];
 
-// function largest(currentLargest, newNumber) {
-//   if (newNumber >= currentLargest )
-//   return newNumber;
-//   else return currentLargest;
-// }
-// const largestDigit = phoneDigits.reduce(largest, 0);
+function largest(currentLargest, newNumber) {
+  if (newNumber >= currentLargest )
+  return newNumber;
+  else return currentLargest;
+}
+const largestDigit = phoneDigits.reduce(largest, 0);
 
-// console.log(phoneDigits);
-// console.log(largestDigit);
+console.log(phoneDigits);
+console.log(largestDigit);
