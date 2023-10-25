@@ -26,6 +26,8 @@ const songArray = [
 // const subtitle = document.querySelector('main h2');
 
 // subtitle.innerHTML = subtitle.textContent + " <em>(Husky)</em>";
+// // subtitle.innerHTML = "";
+
 
 
 // //Slide 14 Change an Attribute
@@ -100,7 +102,9 @@ const songArray = [
 // }
 
 // function renderSongList(aSongArray) {
+
 //   const songListElem = document.querySelector('#dataSection ol');
+//     songListElem.innerHTML = '';
 //   for (const songObj of aSongArray) {
 //     const songLiElem = createSongListItem(songObj);
 //     songListElem.appendChild(songLiElem);
@@ -114,7 +118,7 @@ const songArray = [
 
 
 
-// INTERACTIVITY
+// // INTERACTIVITY
 
 // // Slide 23 Example 1
 // const hideButton = document.querySelector('#puppySection button');
@@ -165,38 +169,38 @@ const songArray = [
 //   renderPuppy();
 // });
 
-// //Slide 25 - Using state to keep track if puppy is showing
+//Slide 25 - Using state to keep track if puppy is showing
 
-// //STATE (should be at top of file)
-// let puppyShown = true;
+//STATE (should be at top of file)
+let puppyShown = true;
 
-// const hideButton = document.querySelector('#puppySection button');
+const hideButton = document.querySelector('#puppySection button');
 
-// function renderPuppy() {
-//   //clear out the previous content befor rendering
-//   const puppyContainer = document.querySelector('#puppySection div');
-//   puppyContainer.innerHTML = '';
+function renderPuppy() {
+  //clear out the previous content befor rendering
+  const puppyContainer = document.querySelector('#puppySection div');
+  puppyContainer.innerHTML = '';
 
-//   if (puppyShown) {
-//     const imgElement = document.createElement('img');
-//     imgElement.src = 'img/puppy.jpg';
-//     imgElement.alt = 'a cute puppy';
-//     puppyContainer.appendChild(imgElement);
-//     document.querySelector('#puppySection button').textContent = 'Hide';
-//   }
-//   else { //not shown
-//     document.querySelector('#puppySection button').textContent = 'Show';
-//   }
-// }
+  if (puppyShown) {
+    const imgElement = document.createElement('img');
+    imgElement.src = 'img/puppy.jpg';
+    imgElement.alt = 'a cute puppy';
+    puppyContainer.appendChild(imgElement);
+    document.querySelector('#puppySection button').textContent = 'Hide';
+  }
+  else { //not shown
+    document.querySelector('#puppySection button').textContent = 'Show';
+  }
+}
 
-// renderPuppy();
+renderPuppy();
 
-// hideButton.addEventListener('click', function (event) {
-//   //change the state
-//   puppyShown = !puppyShown;
-//   //rerender
-//   renderPuppy();
-// });
+hideButton.addEventListener('click', function (event) {
+  //change the state
+  puppyShown = !puppyShown;
+  //rerender
+  renderPuppy();
+});
 
 // // Slide 28 - Form 
 // const formElement = document.querySelector('#formSection form');
@@ -211,63 +215,63 @@ const songArray = [
 //   //... do something with that value!  
 // });
 
-// //Slide 28A
-// //(note I'm readding createSongListItem and renderSongList here 
-// //because it was commented out above to make these examples independent
-// // note that the render songlist now clears out the section first before 
-// // rerendering
+//Slide 28A
+//(note I'm readding createSongListItem and renderSongList here 
+//because it was commented out above to make these examples independent
+// note that the render songlist now clears out the section first before 
+// rerendering
+
+renderSongList(songArray);
+
+function createSongListItem(songObj) {
+  //make this into a url
+  const aElem = document.createElement('a');
+  aElem.textContent = songObj.artist + " - " + songObj.title;
+  aElem.href = songObj.youtubeUrl;
+
+  // create the newLi and make
+  const newLi = document.createElement('li');
+  newLi.append(aElem);
+  return newLi;
+}
+
+function renderSongList(aSongArray) {
+  // clear out the previous content befor rendering
+  const songListElem = document.querySelector('#dataSection ol');
+  songListElem.innerHTML = '';
+
+  for (const songObj of aSongArray) {
+    const songLiElem = createSongListItem(songObj);
+    songListElem.appendChild(songLiElem);
+  }
+
+  document.querySelector('#dataSection h2').textContent = "Top " + aSongArray.length + " Songs";
+
+}
+const formElement = document.querySelector('#formSection form');
+
+//listen for submit events
+formElement.addEventListener('submit', function (event) {
+  //stop normal behavior (going to a new site)
+  event.preventDefault();
+
+  //access what value the user typed in
+  const artistInput = document.querySelector('#artistInput');
+  const titleInput = document.querySelector('#titleInput');
+  const urlInput = document.querySelector('#urlInput');
+
+  const artistVal = artistInput.value;
+  const titleVal = titleInput.value;
+  const urlVal = urlInput.value;
+
+  console.log(artistVal + " " + titleVal + " " + urlVal);
+
+  const newSong = { artist: artistVal, title: titleVal, youtubeUrl: urlVal };
+
+  songArray.push(newSong);
+
+  renderSongList(songArray);
+
+});
 
 // renderSongList(songArray);
-
-// function createSongListItem(songObj) {
-//   //make this into a url
-//   const aElem = document.createElement('a');
-//   aElem.textContent = songObj.artist + " - " + songObj.title;
-//   aElem.href = songObj.youtubeUrl;
-
-//   // create the newLi and make
-//   const newLi = document.createElement('li');
-//   newLi.append(aElem);
-//   return newLi;
-// }
-
-// function renderSongList(aSongArray) {
-//   // clear out the previous content befor rendering
-//   const songListElem = document.querySelector('#dataSection ol');
-//   songListElem.innerHTML = '';
-
-//   for (const songObj of aSongArray) {
-//     const songLiElem = createSongListItem(songObj);
-//     songListElem.appendChild(songLiElem);
-//   }
-
-//   document.querySelector('#dataSection h2').textContent = "Top " + aSongArray.length + " Songs";
-
-// }
-// const formElement = document.querySelector('#formSection form');
-
-// //listen for submit events
-// formElement.addEventListener('submit', function (event) {
-//   //stop normal behavior (going to a new site)
-//   event.preventDefault();
-
-//   //access what value the user typed in
-//   const artistInput = document.querySelector('#artistInput');
-//   const titleInput = document.querySelector('#titleInput');
-//   const urlInput = document.querySelector('#urlInput');
-
-//   const artistVal = artistInput.value;
-//   const titleVal = titleInput.value;
-//   const urlVal = urlInput.value;
-
-//   console.log(artistVal + " " + titleVal + " " + urlVal);
-
-//   const newSong = { artist: artistVal, title: titleVal, youtubeUrl: urlVal };
-
-//   songArray.push(newSong);
-
-//   renderSongList(songArray);
-
-// });
-
-// // renderSongList(songArray);
