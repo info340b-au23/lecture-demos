@@ -10,14 +10,14 @@ const songArray = [
   }
 ];
 
-// //Slide 13 - change h1 element and add additional highlighted text
-// // aquire the h1 element
+// // //Slide 13 - change h1 element and add additional highlighted text
+// // // aquire the h1 element
 
 // const theH1 = document.querySelector('h1');
-// console.log(theH1)
+// console.log("theH1: ", theH1)
 
 // const puppyImg = document.querySelector('#puppySection img')
-// console.log(puppyImg);
+// console.log("The puppy Image: ", puppyImg);
 
 // // querySelectorAll will select multiple elements rather than just the 1st element
 // // that matches the selector
@@ -114,7 +114,7 @@ const songArray = [
 
 
 
-// // INTERACTIVITY
+// INTERACTIVITY
 
 // // Slide 23 Example 1
 // const hideButton = document.querySelector('#puppySection button');
