@@ -29,13 +29,13 @@ console.log(peopleArray);
 // console.log(nameArray1);
 
 // // ex3 - using for each rather than map
-// const nameArray2 = [];
+// // const nameArray2 = [];
 // peopleArray.forEach(function(personObj, index) {
-//     nameArray2[index] = personObj.name;
-//     // peopleArray[index] = personObj.name;
+//     // nameArray2[index] = personObj.name;
+//     peopleArray[index] = personObj.name;
 // });
-// console.log(nameArray2)
-// // console.log(peopleArray)
+// // console.log(nameArray2)
+// console.log(peopleArray)
 
 // // ex4 - using 'for of' rather than map or for each'
 // const nameArray3 = [];
@@ -125,15 +125,15 @@ console.log(peopleArray);
 
 //   // Slide 12
 //   //destructuring arrays
-// const myArray = [1, 2, 3];
+// const myArray = [1, 2, 3, 4];
 // const [x, y, z] = myArray; //myArray elements to `x`, `y`, `z`
 // console.log(x); //=> 1;
 // console.log(y); //=> 2;
 // console.log(z); //=> 3;
 
 // //destructuring objects
-// const myObject = {a: "dude", b: "surf", c: 3};
-// const {a, b, c} = myObject; //myObject.a to a, etc.
+// const myObject = {a: "dude", b: "surf", c:3, d:"bigwave"};
+// const {a, c, b} = myObject; //myObject.a to a, etc.
 // console.log(a); //=> 1
 // console.log(b); //=> 2;
 // console.log(c); //=> 3;
@@ -192,7 +192,7 @@ console.log(peopleArray);
 // console.log(person); //has name, height, weight
 // console.log(personWithHat); //has name, height, weight, hat
 
-// const tallerAda = {...person, height: 74};
+// const tallerAda = {...person, height: 74 };
 // console.log(tallerAda);
 
 // //Slide 15
@@ -207,8 +207,8 @@ console.log(peopleArray);
 
 //     return total;
 
-//     // //or as one line with a concise arrow function:
-//     // return numbers.reduce((total, n) => total+n);
+//     //or as one line with a concise arrow function:
+//     return numbers.reduce((total, n) => total+n);
 // }
 
 // function sum1(...numbers) { return numbers.reduce((total, n) => total + n); }
