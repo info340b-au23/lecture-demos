@@ -1,16 +1,16 @@
 'use strict';
 
 const peopleArray = [
-  {name: 'Ada', height: 64, weight: 135},
-  {name: 'Bob', height: 74, weight: 156, pronoun: 'they/them'},
-  {name: 'Chris', height: 69, weight: 139},
-  {name: 'Diya', height: 69, weight: 144},
-  {name: 'Emma', height: 71, weight: 152}
+  { name: 'Ada', height: 64, weight: 135 },
+  { name: 'Bob', height: 74, weight: 156, pronoun: 'they/them' },
+  { name: 'Chris', height: 69, weight: 139 },
+  { name: 'Diya', height: 69, weight: 144 },
+  { name: 'Emma', height: 71, weight: 152 }
 ]
 console.log(peopleArray);
 
 // Slide 5
-//Example use of callback functions
+// Example use of callback functions
 // List out the people in the array
 // We have an array of [{}, {}, {}]
 // We want an array of ["","",""]
@@ -32,8 +32,10 @@ console.log(peopleArray);
 // const nameArray2 = [];
 // peopleArray.forEach(function(personObj, index) {
 //     nameArray2[index] = personObj.name;
+//     // peopleArray[index] = personObj.name;
 // });
 // console.log(nameArray2)
+// // console.log(peopleArray)
 
 // // ex4 - using 'for of' rather than map or for each'
 // const nameArray3 = [];
@@ -43,7 +45,7 @@ console.log(peopleArray);
 // }
 // console.log(nameArray3)
 
-// Example of reduce
+// Example of redzuce
 // Find the average height/weight ratio
 
 // // Ex1: First remember
@@ -77,7 +79,7 @@ console.log(peopleArray);
 //     return newAvgRatio;
 // }, 0)
 // console.log(ratioAvg);
-// console.log(ratioTotal/peopleArray.length)
+// // console.log(ratioTotal/peopleArray.length)
 
 // //Event listener
 // const buttonElem = document.querySelector('button');
@@ -107,12 +109,19 @@ console.log(peopleArray);
 
 //   console.log(foo("world"));
 
-//   //normal function declaration
+//   //arrow function declaration
 // const foo1 = (params) => {
 //     return 'foo '+params;
 //   }
 
 //   console.log(foo1("Fred"));
+
+// // //arrow functiondeclaration, concise body 
+// const myString = "hey there"
+// const foo2 = myString => myString;
+
+// console.log(foo2(myString));
+
 
 //   // Slide 12
 //   //destructuring arrays
@@ -129,19 +138,24 @@ console.log(peopleArray);
 // console.log(b); //=> 2;
 // console.log(c); //=> 3;
 
-// Here's the way to return the avg from within the reduce method using the other extra params
-// and demonstrating destructuring from teh people peopleObj
-// const ratioAvg = peopleArray.reduce(function (oldRunningTotal, peopleObj, idx, array) {
 
-//     const {height, weight} = peopleObj;
+// // Slide 13
 
-//     const ratio = height / weight;
+// //an example person object
+// const person = {name: 'Ada', height: 64, weight: 135}
 
-//     const newAvgRatio= oldRunningTotal + ratio/array.length;
+// //a function that expects a person object
+// function getBMI({height, weight}) {
 
-//     return newAvgRatio;
-// }, 0)
-// console.log(ratioAvg);
+//   return 703*weight/(height*height);
+// }
+
+// const adaBMI = getBMI(person);
+
+// console.log (adaBMI)
+
+// // Here's the way to return the avg from within the reduce method using the other extra params
+// // and demonstrating destructuring from the people peopleObj
 
 // const ratioAvg = peopleArray.reduce(function (oldRunningTotal, {height, weight}, idx, array) {
 
@@ -160,7 +174,7 @@ console.log(peopleArray);
 // //With an array
 // const dimensions = [10, 20, 30, 40];
 // //extra values are "spread" into destructuring slots
-// const [width, height, ...rest] = dimensions 
+// const [width, height, ...rest] = dimensions
 // console.log(width);  //=> 10
 // console.log(height); //=> 20
 // console.log(rest);   //=> [30, 40]; the rest of the values!
