@@ -1,16 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-// //add bootstrap
-// import 'bootstrap/dist/css/bootstrap.css'
+//add bootstrap
+import 'bootstrap/dist/css/bootstrap.css'
 
 import './index.css';
 
-//create an element using JSX
-const reactElem = <h1>Hello React!</h1>
+// //create an element using JSX
+// const reactElem = <h1>Hello React!</h1>
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(reactElem);
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(reactElem);
 
 // //Slide 6 using an inline expression 
 // const titleMessage = "Hello World!!!";
@@ -204,9 +204,9 @@ root.render(reactElem);
 
 
 
-// //Slide 15 - Making modular components - Now we're moving stuff to individual js component files
+//Slide 15 - Making modular components - Now we're moving stuff to individual js component files
 
-// import App from './components/App'
+import App from './components/App'
 
-// const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(<App/>);
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App/>);
