@@ -19,7 +19,8 @@ root.render(reactElem);
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(reactElem);
 
-//Slide 6a (little more complex, add the header), change 'class' to 'className'
+// // Slide 6a (little more complex, add the header), change 'class' to 'className'
+// // Still not a component
 
 
 // const content = (
@@ -59,6 +60,7 @@ root.render(reactElem);
 // root.render(content);
 
 // // Slide 13
+// // Example of converting a Resume. There are more components here. Composition... 
 
 // function Header(props) {
 //     //what does a header look like?
@@ -99,7 +101,9 @@ root.render(reactElem);
 // root.render(content);
 
 
-// //Slide 14
+// // Slide 14
+// // Still multiple components, but here the JobList is what we render, rather than individual JobCards
+
 
 // function Header(props) {
 //     //what does a header look like?
@@ -146,7 +150,10 @@ root.render(reactElem);
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(content);
 
+
 // // Slide 14
+// // We always have an App component by convension, that is what is rendered (attached) to the root
+
 // function Header(props) {
     
 //     return (
@@ -196,7 +203,8 @@ root.render(reactElem);
 // root.render(<App/>);
 
 
-// //Slide 14A - Making modular components - Now we're moving stuff to individual js component files
+
+// //Slide 15 - Making modular components - Now we're moving stuff to individual js component files
 
 // import App from './components/App'
 

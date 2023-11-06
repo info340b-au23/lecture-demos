@@ -1,25 +1,25 @@
 import React from 'react';
 
-// function JobCard(props) {
-//     //remember the image has to be closed and the 'class' needs to change to 'className'
-//     return (
-//         <div className="card col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-//             <img src="img/SeattleTimes.jpg" alt="Seattle Times logo" />
-//             <h3>Seattle Times: Paperboy</h3>
-//         </div>
-//     )
-// }
+function JobCard(props) {
+    //remember the image has to be closed and the 'class' needs to change to 'className'
+    return (
+        <div className="card col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+            <img src="img/SeattleTimes.jpg" alt="Seattle Times logo" />
+            <h3>Seattle Times: Paperboy</h3>
+        </div>
+    )
+}
 
-// export function JobCardList(props) {
-//     return (
-//         <div id="class-cards" className="row">
-//             <JobCard />
-//             <JobCard />
-//             <JobCard />
-//             <JobCard />
-//         </div>
-//     )
-// }
+export function JobCardList(props) {
+    return (
+        <div id="class-cards" className="row">
+            <JobCard />
+            <JobCard />
+            <JobCard />
+            <JobCard />
+        </div>
+    )
+}
 
 // //Slide 16 (props example)
 
