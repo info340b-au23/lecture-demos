@@ -8,7 +8,7 @@
       "channel": "general"
   },
   {
-      "uid": "parrot",
+      "userid": "parrot",
       "userName": "Parrot",
       "userImg": "/img/Parrot.png",
       "text": "It's warm over here",

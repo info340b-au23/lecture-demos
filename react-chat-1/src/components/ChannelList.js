@@ -46,6 +46,7 @@ import React from 'react';
 //     // const currentChannel = props.currentChannel;
 
 //     const liArray = CHANNEL_LIST.map((channelNameString) => {
+        
 //         let classList = 'text-light';
 //         if (channelNameString === currentChannel){
 //             classList= 'text-dark bg-warning'
@@ -63,27 +64,27 @@ import React from 'react';
 //     )
 // }
 
-// // Example Slide 24 
-// export function ChannelList(props) {
-//     const CHANNEL_LIST = ['general', 'random', 'dank-memes', 'channel-4'];
+// Example Slide 24 
+export function ChannelList(props) {
+    const CHANNEL_LIST = ['general', 'random', 'dank-memes', 'channel-4'];
 
-//     // const currentChannel = 'general';
-//     const currentChannel = props.currentChannel;
+    // const currentChannel = 'general';
+    const currentChannel = props.currentChannel;
 
-//     const liArray = CHANNEL_LIST.map((channelNameString) => {
-//         let classList = 'text-light';
-//         if (channelNameString === currentChannel){
-//             classList= 'text-dark bg-warning'
-//         }
-//         const element = <li key={channelNameString}><a className={classList} href="">{channelNameString}</a></li>
-//         return element;
-//     })
+    const liArray = CHANNEL_LIST.map((channelNameString) => {
+        let classList = 'text-light';
+        if (channelNameString === currentChannel){
+            classList= 'text-dark bg-warning'
+        }
+        const element = <li key={channelNameString}><a className={classList} href="">{channelNameString}</a></li>
+        return element;
+    })
     
-//     return (
-//         <nav className="bg-secondary text-light py3 h-100">
-//             <ul>
-//                 {liArray}
-//             </ul>
-//         </nav>
-//     )
-// }
+    return (
+        <nav className="bg-secondary text-light py3 h-100">
+            <ul>
+                {liArray}
+            </ul>
+        </nav>
+    )
+}
