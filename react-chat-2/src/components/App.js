@@ -82,7 +82,7 @@ export default function App(props) {
 //   );
 // }
 
-//Post Lecture, add the Channel navigation (elevate state, etc)
+// //Post Lecture, add the Channel navigation (elevate state, etc)
 
 // import React, { useState } from 'react';
 

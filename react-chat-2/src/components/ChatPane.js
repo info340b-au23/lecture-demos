@@ -25,7 +25,7 @@ export function ChatPane(props) {
   })
 
 
-  // // original 
+  // original 
   return (
     <div className="scrollable-pane">
       <div className="pt-2 my-2">
@@ -61,6 +61,7 @@ export function ChatPane(props) {
 //   )
 
 // }
+
 
 function MessageItem(props) {
   const { userName, userImg, text } = props.messageData;
@@ -99,7 +100,7 @@ function MessageItem(props) {
 //   //(trying to update count on button)
 //   let currentCount = 0;
 //   const handleClick = (event) => {
-//     console.log("you clicked me!");
+//     console.log("you clicked me!: ", currentCount);
 //     currentCount = currentCount + 1;
 //   }
 
@@ -171,12 +172,14 @@ function MessageItem(props) {
 // import CHAT_HISTORY from '../data/chat_log.json';
 
 // export function ChatPane(props) {
-//   // const stateManagementArray = useState(0); //start out at 0 very first time
-//   // const count = stateManagementArray[0];
-//   // const setCount = stateManagementArray[1];
+ 
+//   const stateManagementArray = useState(0); //start out at 0 very first time
+//   console.log("stateManagementArray: ", stateManagementArray);
+//   const count = stateManagementArray[0];
+//   const setCount = stateManagementArray[1];
 
-//   //instead destructure
-//   const [count, setCount] = useState(0);
+//   // //instead destructure
+//   // const [count, setCount] = useState(0);
 //   const currentChannel = props.currentChannel;
 
 

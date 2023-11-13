@@ -31,6 +31,7 @@ export function ComposeForm(props) {
 //   const handleSubmit = (event) => {
 //     console.log("submit the form");
 //     console.log("post", typedValue);
+//     setTypedValue("")
 //   }
 
 //   return (
@@ -103,6 +104,7 @@ export function ComposeForm(props) {
 //     console.log("submit the form");
 //     console.log("post", typedValue);
 //     props.addMessageCallback(typedValue);
+//     setTypedValue("")
 //   }
 
 //   return (
