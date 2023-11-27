@@ -120,9 +120,9 @@ root.render(<App />);
 //     })
 
 
-// // //render the root
-// // const root = ReactDOM.createRoot(document.getElementById('root'));
-// // root.render(<App />); 
+// //render the root
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(<App />); 
 
 // //Slide 32
 
