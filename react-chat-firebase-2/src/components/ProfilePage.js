@@ -40,7 +40,7 @@
 //Slide 25 and 26
 import React, { useState } from 'react';
 
-import { getStorage, ref, uploadBytes, getDownloadURL} from 'firebase/storage';
+import { getStorage, ref,   , getDownloadURL} from 'firebase/storage';
 import { updateProfile} from 'firebase/auth';
 import { getDatabase, ref as dbRef, set as firebaseSet } from 'firebase/database';
 
